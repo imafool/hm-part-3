@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+  <script>
+    // 旧版本JS使用var声明变量，新版本使用let声明变量是为了解决var的一些问题：
+    // var可以先使用，后声明
+    // var可以重复声明
+    // 全局变量，没有块级作用域，变量提示等等问题
+    number = 100
+    console.log(number) // 100
+    var number
+
+    var number = 200
+    console.log(number) // 200
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+
+</head>
+<body>
+
+  <!--内联JS-->
+  <button onclick="alert('已点击')">点击</button>
+
+  <!--内部JS，放在文件底部：因为浏览器按照代码顺序加载HTML，一般等HTML完全加载完毕，再去执行操作-->
+  <script>
+    // 注释
+    alert('内部JS')
+    // 结束符可写可不写，风格统一即可
+    alert('内部JS');
+  </script>
+
+  <!--外部JS-->
+  <script src="my.js"></script>
+
+</body>
+</html>
