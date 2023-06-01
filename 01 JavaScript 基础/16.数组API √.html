@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+  <script>
+    // 声明
+    let myArray = []
+    document.write(typeof myArray + '<hr>') // object
+    document.write(typeof myArray[0]) // undefined
+    document.write('<hr>')
+    document.write('<hr>')
+
+    // 添加
+    // index
+    myArray[0] = 10
+    myArray[1] = 'huwenfei'
+    myArray[2] = 'wudan'
+    myArray[3] = true
+
+    // Appends new elements to the end of an array, and returns the new length of the array.
+    myArray.push('aaa')
+    myArray.push('bbb')
+
+    // Inserts new elements at the start of an array, and returns the new length of the array.
+    myArray.unshift('cccc')
+    myArray.unshift('dddd')
+
+    // 遍历
+    for (const ele of myArray) {
+        document.write(ele + '<hr>')
+    }
+
+    // 修改
+    myArray[3] = false
+    document.write(myArray[3] + '<hr>')
+
+    // 删除
+    // Removes the last element from an array and returns it.
+    myArray.pop() // bbb
+
+    // Removes the first element from an array and returns it.
+    myArray.shift() // dddd
+
+    document.write('<hr>')
+    for (const ele of myArray) {
+        document.write(ele + '<hr>')
+    }
+
+  </script>
+
+</body>
+</html>

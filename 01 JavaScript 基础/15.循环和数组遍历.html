@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+  <script>
+      // for LOOP
+      for (let i = 0; i < 10; i++) {
+          console.log(i + '--')
+      }
+
+      // 数组 遍历
+      let myArray = ['1', '2', 'xxx', 45, 444, 'huwenfei']
+
+      // 1.for..i
+      for (let i = 0; i < myArray.length; i++) {
+          document.write(i + ' - ' + myArray[i])
+          document.write('<hr>')
+      }
+
+      document.write('<hr>')
+
+      // 2.for..in
+      for (const key in myArray) {
+          // 退出循环【== 和 ===，后者需要类型和值均相等！key是''】
+          if (key === '2'){
+              break
+          }
+
+          document.write(key + ' - ' + myArray[key])
+          document.write('<hr>')
+      }
+
+      document.write('<hr>')
+
+      // 3.for..of
+      for (const ele of myArray) {
+          document.write(ele)
+          document.write('<hr>')
+      }
+
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+  <script>
+    // 输入一个数，如果小于10，前面补零，否则不处理
+    let inputInfo = prompt('请输入一个数字（要求正整数）')
+    let number = Number(inputInfo);
+
+    while (number < 0) {
+        inputInfo = prompt('请输入一个正整数！')
+        number = Number(inputInfo);
+    }
+
+    if (number < 10){
+        inputInfo = '0' + inputInfo
+    }
+
+    console.log(`你输入的数字是：${inputInfo}`)
+
+  </script>
+
+</body>
+</html>

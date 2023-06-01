@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+  <script>
+    // 表达式：可被求值，引擎会计算出一个表达式的结果
+
+    // 语句：是一段可以执行的代码，不一定有值
+
+    let name = 'huwenfei'
+    let drink = ''
+
+    if (name == 'huwenfei'){
+        drink = '牛奶'
+    }
+    if (name == 'wudan'){
+        drink = '酸奶'
+    }
+
+    alert(`${name}喝${drink}`)
+
+    alert(!name == 'huwenfei' ? '酸奶' : '牛奶')
+
+    // switch..case
+    switch (name){
+        case 'huwenfei':
+            console.log(`${name}喝牛奶`)
+            break
+        case 'wudan':
+            console.log(`${name}喝酸奶`)
+            break
+        default:
+            console.log('孩子喝白开水')
+    }
+
+  </script>
+</body>
+</html>
