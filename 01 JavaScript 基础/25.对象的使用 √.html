@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+
+	<script>
+		
+		//////////////////////////// 对象声明
+		let Obj = {
+			name: 'huwenfei',
+			age: 128,
+			width: '30cm',
+			'other': 'Other',
+			
+			// 方法声明 1
+			eat() {
+				return 'food'
+			},
+			
+			// 方法声明 2
+			changeObj: function (){
+				this.width = '300mm'
+			}
+		}
+		
+		//////////////////////////// 访问属性
+		
+		// 访问方式 1
+		console.log('Obj的属性：' + Obj.name + '..' + Obj.age + '..' + Obj.width)
+		console.log('Obj的方法：' + Obj.eat())
+		
+		// 访问方式 2
+		console.log('使用Obj[\' other \']' + Obj['other'])
+		
+		//////////////////////////// 更新属性
+		Obj.height = '1800mm'
+		console.log(Obj)
+		
+		// 删除属性
+		delete Obj.age
+		console.log(Obj)
+		
+		// 使用对象内部方法更新属性
+		Obj.changeObj()
+		console.log(Obj)
+		
+		//////////////////////////// 对象遍历
+		console.log('遍历对象')
+		for (const objKey in Obj) {
+			console.log(objKey + '..' + Obj[objKey])
+		}
+		
+	</script>
+
+</body>
+</html>

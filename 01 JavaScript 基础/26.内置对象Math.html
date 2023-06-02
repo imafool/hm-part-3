@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+
+	<script>
+		
+		// 内置对象Math提供一些常用数学运算
+		
+		// 随机数 [0,1)
+		console.log(Math.random())
+		// 0-100
+		console.log(Math.floor(Math.random() * (100 + 1))) // 0-100.99999下取整
+		
+		// 5-100
+		console.log(5 + Math.floor(Math.random() * (5 + 1))) // 基本部分 + 变化部分
+		
+		// m-n
+		
+		// 取整
+		console.log(Math.ceil(1.2)) // 2
+		console.log(Math.floor(1.2)) // 1
+		
+		// 最值
+		// The largest of the given numbers.
+		// If any one or more of the parameters cannot be converted into a number, NaN is returned.
+		// The result is -Infinity if no parameters are provided.
+		console.log(Math.max(1, 2, 3, 100)) // 100
+		console.log(Math.min(1, 2, 3, 100)) // 1
+		
+		// 幂运算
+		console.log(Math.pow(2, 10)) // 1024
+		
+		// 绝对值
+		console.log(Math.abs(-9876665))
+		
+	</script>
+
+</body>
+</html>
