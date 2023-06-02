@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+
+	<script>
+		// 内部函数 访问 外部函数 变量，采用的链式查找的方式，就近原则
+		
+		let num = 10
+		
+		function func1(){
+			num = 20
+			
+			function func2(){
+				console.log(num) // 访问外部函数的变量
+			}
+			
+			func2()
+		}
+		
+		func1() // 20
+		
+	</script>
+
+</body>
+</html>

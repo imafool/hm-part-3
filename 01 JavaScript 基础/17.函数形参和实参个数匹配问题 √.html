@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+
+	<script>
+		function sum (num1, num2){
+			document.write(num1 + num2)
+		}
+		
+		// 形参实参匹配，正常计算
+		sum(1, 2)
+		
+		// 实参少，num1正常传递，num2不存在，是undefined，所以结果就是NaN，Not a Number
+		sum(1)
+		
+		// 实参多，多于形参的参数，被函数舍弃
+		sum(1, 2, 3)
+	</script>
+
+</body>
+</html>

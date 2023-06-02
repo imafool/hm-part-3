@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+
+	<script>
+		
+		// arguments对象：所有函数都内置一个arguments对象，里面存储了所有传递过来的实际参数
+		
+		function func(){
+			// document.write(arguments)
+			
+			for (const arg of arguments) {
+				document.write(arg)
+			}
+		}
+		
+		func(1, 10, 100, 1000, 10000)
+		
+	</script>
+
+</body>
+</html>
