@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DOM元素获取</title>
+</head>
+<body>
+
+  <div class="box">
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+    </ul>
+  </div>
+
+
+  <script>
+
+    // 根据CSS选择器来获取DOM元素
+    // 返回值：匹配的第一个对象 HTMLElement
+    let divElement = document.querySelector('.box');
+    console.log(divElement)
+
+    let lastLi = document.querySelector('li:last-child');
+    console.log(lastLi)
+
+    // 返回多元素数组
+    // 返回值：数组，NodeList，遍历修改
+    let listLi = document.querySelectorAll('li');
+    console.log(listLi)
+
+  </script>
+
+</body>
+</html>

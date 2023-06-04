@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DOM元素获取</title>
+  <style>
+    .son1 {
+        width: 1000px;
+        height: 100px;
+        background-color: red;
+    }
+
+    .son2 {
+        width: 500px;
+        height: 50px;
+        background-color: chartreuse;
+    }
+
+    .newSty {
+        width: 100px;
+        height: 10px;
+        background-color: blue;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box">
+    <img src="" alt="">
+
+    <div class="son1"></div>
+
+    <div class="son2"></div>
+
+    <form>
+      输入名称 <input type="text">
+    </form>
+
+    <div class="selfdef"></div>
+  </div>
+
+
+  <script>
+
+    let img = document.querySelector('img');
+
+    ////////////////////////////////////// 更新常用元素属性
+    img.src = '../../../2057129.jpg'
+    img.title = '来自小鸟壁纸~'
+    img.width = 600
+
+    ////////////////////////////////////// 更新样式属性
+    // 1.通过修改style; 属性名驼峰
+    const son1 = document.querySelector('.son1');
+    console.log(son1)
+    son1.style.backgroundColor = '#000000'
+
+    // 2.通过替换className，注意保存原类名
+    son1.className = 'newSty'
+
+    // 3.通过classList操作类名
+    son1.classList.add('son2') // 追加
+    son1.classList.remove('son1') // 移除
+    son1.classList.toggle('newSty') // 切换
+
+
+    ////////////////////////////////////// 更新表单属性
+    let input = document.querySelector('input');
+    input.placeholder = '请输入几个文字'
+    // input.type = 'password'
+    input.value = 'set something'
+
+    ////////////////////////////////////// 更新自定义属性  标准属性：class  id  title  自定义属性：data-
+    let self = document.querySelector('.selfdef');
+    self.dataset.id = 'mydiv'
+    console.log(self)
+    console.log(self.dataset.id)
+
+  </script>
+
+</body>
+</html>

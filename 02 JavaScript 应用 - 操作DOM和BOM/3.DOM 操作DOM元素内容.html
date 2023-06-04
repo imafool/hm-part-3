@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DOM元素获取</title>
+</head>
+<body>
+
+  <div class="box">
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+    </ul>
+  </div>
+
+
+  <script>
+
+    // 修改元素内容，本质上是操作DOM对象
+    let divElement = document.querySelector('.box');
+    console.log(divElement)
+
+    divElement.innerText = '<p>好吧 innerText</p>' // 不解析HTML标签
+    divElement.innerHTML = '<p>好吧 innerHTML</p>' // 解析HTML标签
+
+  </script>
+
+</body>
+</html>
