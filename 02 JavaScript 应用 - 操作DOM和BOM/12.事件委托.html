@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>事件委托</title>
+</head>
+<body>
+
+  <ul>
+    <li>111</li>
+    <li>222</li>
+    <li>333</li>
+    <li>444</li>
+    <li>555</li>
+  </ul>
+
+  <script>
+
+    // 事件委托
+    // ：利用时间流的特征，解决一些开发需求
+    // ：减少实践注册事件，提高程序性能
+    // ：事件委托就是利用事件冒泡的特点，【给父元素注册事件】，当触发子元素的时候，会冒泡给父元素身上，从而触发马父元素的事件
+
+    let node = document.querySelector('ul');
+    node.addEventListener('click', function(ev) {
+        // 利用事件对象获取具体点击的元素
+        console.log(ev.target)
+        ev.target.style.color = 'red'
+    })
+
+  </script>
+
+</body>
+</html>

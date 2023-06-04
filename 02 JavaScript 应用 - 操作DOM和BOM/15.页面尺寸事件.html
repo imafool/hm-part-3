@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>页面尺寸事件</title>
+</head>
+<body>
+
+  <script>
+
+    // 监听窗口尺寸发生改变，触发事件  resize
+    // Firefox不生效
+    let body = document.querySelector('body');
+    body.addEventListener('resize', function() {
+        if (body.style.height < 500){
+            console.log('页面大小变小了')
+        }
+    })
+
+  </script>
+
+</body>
+</html>

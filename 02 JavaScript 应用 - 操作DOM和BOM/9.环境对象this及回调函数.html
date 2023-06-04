@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>this</title>
+</head>
+<body>
+
+
+  <script>
+
+    // this：每个函数内部都有this对象
+
+    function func(){
+        console.log(this) // 指向Window：：this指向函数调用者
+    }
+
+    func() // 隐含：window.func()
+
+
+    // 回调函数：函数作为参数传递给另一个函数，该函数是回调函数
+    // 事件触发执行函数就是回调函数！
+    // node.addEventListener('click', function (ev) {
+    //     console.log(ev)
+    // })
+
+  </script>
+
+</body>
+</html>

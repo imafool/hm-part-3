@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>事件监听</title>
+
+  <style>
+    div {
+        width: 500px;
+        height: 500px;
+    }
+  </style>
+</head>
+<body>
+
+  <div></div>
+
+  <script>
+    // 事件监听三要素：事件源（DOM元素） + 事件类型（触发方式） + 事件调用的函数
+    let node = document.querySelector('div'); // 事件源
+
+    node.addEventListener('click', function() { // 事件类型  处理函数
+        node.innerText = '111'
+        alert('111')
+    })
+
+
+    /*
+     *  事件监听的几个版本：
+     */
+    // L0：事件源.on事件=处理函数。【会覆盖！】
+    node.onclick = function() {
+        node.innerText = '222'
+        alert('222')
+    }
+
+    // 推荐 L2：事件源.addEventListener(事件, 处理函数)【可以绑定多次，有更多特性！】
+    node.addEventListener('click', function() {
+        node.innerText = '333'
+        alert('333')
+    })
+
+  </script>
+
+</body>
+</html>

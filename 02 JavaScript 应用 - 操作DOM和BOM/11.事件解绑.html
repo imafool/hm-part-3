@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>事件解绑</title>
+  <style>
+      div {
+          width: 500px;
+          height: 500px;
+      }
+  </style>
+</head>
+<body>
+
+  <div></div>
+  <button>解绑事件</button>
+
+  <script>
+      // 对于L0型事件绑定，node.onclick = null实现解绑
+
+
+      // 对于L2型事件: target.removeEventListener('事件类型', '事件处理函数', '[可选]')
+      let node = document.querySelector('div');
+      // 匿名函数无法解绑
+      handler = function() {
+          node.style.backgroundColor = '#000000'
+      }
+      node.addEventListener('click', handler)
+
+      // 事件解绑
+      let btn = document.querySelector('button');
+      btn.addEventListener('click', function() {
+        node.removeEventListener('click', handler)
+      })
+  </script>
+
+</body>
+</html>

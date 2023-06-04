@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>页面加载和页面滚动事件</title>
+
+  <style>
+    /* 查看页面滚动效果 */
+    div {
+        height: 10000px;
+    }
+  </style>
+</head>
+<body>
+
+  <div></div>
+
+  <script>
+
+    // 1. 页面加载事件：加载外部资源，加载完毕的时候触发的事件，事件名 load
+    // ：监听页面所有资源全部加载完毕，给window添加load事件
+
+    window.addEventListener('load', function (){
+        console.log('页面资源已加载完毕')
+    })
+
+
+    // 2. 页面滚动事件：滚动条滚动的时候连续触发的事件，如页面滚动的时候做一些处理，事件名 scroll
+    window.addEventListener('scroll', function (){
+        console.log('页面在滚动哦') // 连续触发
+        let scrollTop = document.documentElement.scrollTop; // 滚动像素
+        console.log(scrollTop)
+    })
+
+
+  </script>
+
+</body>
+</html>

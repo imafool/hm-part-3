@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>事件类型</title>
+</head>
+<body>
+
+  名称：<label>
+    <input>
+  </label>
+  <br>
+  <br>
+
+  文本域：<label>
+    <textarea></textarea>
+  </label>
+
+  <script>
+
+    /////////// 事件类型 ///////////
+    // 鼠标事件: click, mouseenter, mouseleave
+
+    // 焦点事件（光标）: focus, blur（失去焦点）
+
+    // 键盘事件: keydown（键盘按下触发）, keyup（键盘抬起触发）
+
+    // 文本事件: 表单输入触发 input
+
+    let inputNode = document.querySelector('input');
+
+    inputNode.addEventListener('input', function (){
+        let value = inputNode.value
+        let textAreaElement = document.querySelector('textarea');
+        textAreaElement.value = value
+    })
+
+  </script>
+
+</body>
+</html>
