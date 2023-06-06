@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+
+<script>
+  // 常用【href属性】，利用JS方式跳转页面
+  console.log(location.href)
+  // 设置跳转链接
+  setTimeout(function () {
+      location.href = 'https://www.bilibili.com'
+  }, 600000)
+
+  //location对象拆分并保存了URL地址的各个部分
+  // 【search属性】获取地址中携带的参数,  ?...
+  console.log(location.search)
+  // 【hash属性】获取地址中的哈希值，符号#后的部分
+  console.log(location.hash)
+
+  // 【reload方法】刷新当前页面，传入参数为true时，强制刷新，类似CTRL+F5
+  setTimeout(function () {
+      location.reload()
+  }, 600060)
+</script>
+</body>
+</html>

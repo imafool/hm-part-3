@@ -13,6 +13,22 @@
     console.log('数组输出：' + myArr)
     console.log('数组元素个数：' + myArr.length)
     console.log('第1个元素是：' + myArr[0])
+
+    // map:处理数组数据，返回新的数组
+    let mapArr = myArr.map(function (ele, index) {
+        console.log(index + ' - ' + ele)
+        return  ele + 'OOO' // 返回值：处理每项
+    });
+
+    console.log(mapArr)
+    // ["aaaOOO","bbbOOO","cccOOO","dddOOO"]
+
+    // join：把数组中的每一个元素拼接
+    let join = mapArr.join('-');
+    console.log(join) // aaaOOO-bbbOOO-cccOOO-dddOOO
+
+    console.log(mapArr) // aaaOOO-bbbOOO-cccOOO-dddOOO
+    console.log(myArr)
   </script>
 
 </body>

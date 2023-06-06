@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+  <div class="fat">
+    <div class="son1"></div>
+    <div class="son2"></div>
+  </div>
+
+
+  <script>
+    // DOM 树里每一个内容都称为节点
+    // 元素节点（HTML标签）；属性节点（所有的属性）；文本节点（所有的文本）；其他；
+
+    // 节点关系：父节点，子节点，兄弟节点
+    let fat = document.querySelector('.fat');
+
+    // 查找子节点
+    let children = fat.children; // 伪数组
+    for (const child of children) {
+        console.log(child)
+    }
+
+    // 获取父节点的所有节点
+    let son1 = document.querySelector('.son1');
+    let parentNode = son1.parentNode;
+    console.log(parentNode)
+
+    // 兄弟节点
+    let son2 = son1.nextElementSibling;
+    let son11 = son2.previousElementSibling;
+    console.log(son2)
+    console.log(son11)
+
+    // 创建节点
+    let createdDiv = document.createElement('div');
+    // 添加节点
+    document.body.appendChild(createdDiv)
+    console.log(document.querySelector('body'))
+    // 添加元素createdDiv到son2之前
+    fat.insertBefore(createdDiv, son2)
+    console.log(document.querySelector('body'))
+
+    // 克隆节点
+    let cloneNode1 = fat.cloneNode(true); // 整体复制一份
+    console.log(cloneNode1)
+
+    let cloneNode2 = fat.cloneNode(false); // 只复制本身，不包含后代，默认
+    console.log(cloneNode2)
+
+    // 移除节点：必须通过父元素进行删除，如果不存在父子关系，则删除不成功
+    cloneNode1.removeChild(cloneNode1.children[0])
+    cloneNode1.removeChild(cloneNode1.children[0])
+    cloneNode1.removeChild(cloneNode1.children[0])
+    console.log(cloneNode1)
+
+  </script>
+</body>
+</html>

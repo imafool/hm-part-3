@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+<script>
+  // 延迟函数：JS内置的，让代码延迟执行的函数，叫setTimeout，语法：setTimeout(回调函数，等待毫秒数)，只执行一次
+  let timeout = setTimeout(function () {
+    alert("哇，你等了2000ms了！")
+  }, 2000);
+
+  // 清除
+  clearTimeout(timeout)
+
+  // lib.dom.d.ts
+  // declare function setInterval(handler: TimerHandler, timeout?: number, ...arguments: any[]): number;
+  // declare function setTimeout(handler: TimerHandler, timeout?: number, ...arguments: any[]): number;
+
+  // 每隔5000毫秒执行一次
+  setInterval(function () {
+      document.write(new Date() + '<br>')
+  }, 5000)
+
+</script>
+</body>
+</html>

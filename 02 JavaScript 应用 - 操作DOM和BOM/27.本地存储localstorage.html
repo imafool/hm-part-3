@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+<script>
+  // 存储数据，刷新网页不丢失（本地存储），可以多窗口共享数据（不包括跨域），以键值对形式存储使用
+  console.log(localStorage)
+
+  localStorage.setItem('我的名字', 'huwenfei')
+  localStorage.setItem('你的名字', '哈哈哈')
+
+  console.log(localStorage.getItem('我的名字'))
+
+  // 存储对象（多数据）
+  const obj = {
+      name: 'huwenfei',
+      age: 50,
+      height: '60cm',
+      width: '20cm',
+      long: '30cm',
+      favorite: '喜欢喜欢喜欢喜欢喜欢....'
+  }
+  localStorage.setItem('myObj', obj) // 存储的value是[object Object]，无法使用
+  console.log(localStorage.getItem('myObj'))
+
+  // 使用JSON存
+  localStorage.setItem('myObj', JSON.stringify(obj))
+  let fromLocalstorage = localStorage.getItem('myObj'); // String
+  console.log(fromLocalstorage)
+  console.log(typeof fromLocalstorage)
+
+  let parse = JSON.parse(fromLocalstorage); // Object
+  console.log(typeof parse)
+</script>
+</body>
+</html>
